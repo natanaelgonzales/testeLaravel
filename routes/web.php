@@ -14,5 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'Olá, seja bem vindo ao curso';
+    return 'login';
 });
+
+Route::get('/listStudents', 'StudentController@listStudentsByID');
+
+Route::get('/createCourse', 'CourseController@createCourse');
+
+Route::get('/editCourse', 'CourseController@editCourse');
+
+Route::get('/deleteCourse', 'CourseController@deleteCourse');
+
+Route::get('/createStudent', 'StudentController@createStudent');
+
+Route::get('/editStudent', 'StudentController@editStudent');
+
+Route::get('/deleteStudent', 'StudentController@deleteStudent');
+
+Route::get('/importCourse', 'ImportCourseController@importCourse');
